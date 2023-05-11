@@ -2,13 +2,7 @@ from aiohttp import web
 
 from aioredis import Redis, from_url
 
-
-async def index(request):
-    return web.Response(text="Hello, world")
-
-
-def init_routes(app):
-    app.router.add_get('/', index)
+from fibonacci.routes import init_routes
 
 
 async def init_redis(app: web.Application) -> None:
