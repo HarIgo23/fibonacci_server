@@ -1,6 +1,9 @@
+from typing import Any
+
 from aioredis import Redis
 
-CLIENTS: dict = {}
+
+CLIENTS: dict[str, Any] = {}
 
 
 def get_redis() -> Redis:

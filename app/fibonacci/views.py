@@ -4,7 +4,7 @@ from fibonacci.exceptions import IncorrectFibonacciParams
 from fibonacci.fibonacci import cached_fibonacci_sequence
 
 
-async def index(request: web.Request):
+async def index(request: web.Request) -> web.Response:
     """Return description of site."""
     return web.Response(
         text="""
