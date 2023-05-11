@@ -1,6 +1,6 @@
 from typing import Any
 
-from aioredis import Redis
+from redis.asyncio import Redis
 
 
 CLIENTS: dict[str, Any] = {}

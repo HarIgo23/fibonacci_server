@@ -1,6 +1,6 @@
 from fibonacci.exceptions import IncorrectFibonacciSequence
 
-from aioredis import Redis
+from redis.asyncio import Redis
 
 from config import FIBONACCI_LIST_NAME
 from dependencies import get_redis

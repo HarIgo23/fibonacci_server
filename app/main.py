@@ -1,6 +1,6 @@
 from aiohttp import web
 
-from aioredis import Redis, from_url
+from redis.asyncio import Redis, from_url
 
 from config import ENABLE_WARMUP, FIBONACCI_LIST_NAME, WARMUP_CACHE_LEN
 from dependencies import CLIENTS, get_redis
