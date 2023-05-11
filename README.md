@@ -36,6 +36,13 @@ If you modify dependencies, run this:
 docker-compose build app 
 ```
 
+## Параметры конфига
+
+ENABLE_WARMUP - включает предзаполнение кэша
+
+WARMUP_CACHE_LEN - регулирует количество предзаполненных элементов 
+
+FIBONACCI_LIST_NAME - имя списка в Redis
 
 ## Задание
 Реализовать сервис с единственным API методом, возвращающим срез последовательности чисел

@@ -1,7 +1,7 @@
 from aiohttp import web
 
 from fibonacci.exceptions import IncorrectFibonacciParams
-from fibonacci.fibonacci import fibonacci_sequence
+from fibonacci.fibonacci import cached_fibonacci_sequence
 
 
 async def index(request: web.Request):
@@ -32,8 +32,7 @@ async def fibonacci(request: web.Request) -> web.Response:
         data["error"] = str(e)
         return web.json_response(data)
 
-    sequence = fibonacci_sequence(to_param)
-    data["data"] = sequence[from_param:to_param + 1]
+    data["data"] = await cached_fibonacci_sequence(from_param, to_param)
     return web.json_response(data)
 
 
